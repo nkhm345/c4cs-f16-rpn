@@ -3,13 +3,19 @@ def calculate(string):
     stack = []
  
     for val in string.split(' '):
-        if val == '+':
+        if val in ['-', '+', '*', '/']:
             op1 = stack.pop()
             op2 = stack.pop()
-            result = op2 + op1
+            if val=='-': result = op2 - op1
+            if val=='+': result = op2 + op1
+            if val=='*': result = op2 * op1
+            if val=='/': result = op2 / op1
             stack.append(result)
         else:
-            stack.append(float(val))
+        	try:
+            	stack.append(float(val))
+            except:
+            	raise TypeError
  
     return stack.pop()
 def main():
