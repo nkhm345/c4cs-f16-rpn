@@ -3,7 +3,7 @@ def calculate(string):
     stack = []
  
     for val in string.split(' '):
-        if val in ['-', '+', '*', '/']:
+        if val in ['-', '+', '*', '/', '^']:
             op1 = stack.pop()
             op2 = stack.pop()
             if val=='-': result = op2 - op1
