@@ -10,6 +10,7 @@ def calculate(string):
             if val=='+': result = op2 + op1
             if val=='*': result = op2 * op1
             if val=='/': result = op2 / op1
+            if val=='^': result = op2 ** op1
             stack.append(result)
         else:
             try:
