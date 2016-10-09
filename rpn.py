@@ -12,8 +12,8 @@ def calculate(string):
             if val=='/': result = op2 / op1
             stack.append(result)
         else:
-        	try:
-            	stack.append(float(val))
+            try:
+                stack.append(float(val))
             except:
             	raise TypeError
  
